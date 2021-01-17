@@ -1,0 +1,24 @@
+{
+  "name": "feedback-loop-inc",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "setup": "yarn && lerna bootstrap",
+    "dev:frontend": "yarn workspace @feedback-loop-inc/app dev",
+    "database:build": "yarn workspace @feedback-loop-inc/database build",
+    "database:generate": "yarn workspace @feedback-loop-inc/database generate",
+    "database:migrate": "env-cmd yarn workspace @feedback-loop-inc/database migrate"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "lerna": "^3.22.1",
+    "typescript": "^4.1.3"
+  }
+}
